@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
-import { Cuisine, Dish } from '../types';
-import DishCard from './DishCard';
-import GridSizeControl from './GridSizeControl';
-import { getGridColsClass } from '../utils/grid-helpers';
+import { Cuisine, Dish } from '../types.ts';
+import DishCard from './DishCard.tsx';
+import GridSizeControl from './GridSizeControl.tsx';
+import { getGridColsClass } from '../utils/grid-helpers.ts';
 
 interface CuisineGalleryProps {
   cuisine: Cuisine;

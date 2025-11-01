@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Cuisine } from '../types';
+import { Cuisine } from '../types.ts';
 
 interface CuisineCardProps {
   cuisine: Cuisine;

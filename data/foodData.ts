@@ -1,4 +1,4 @@
-import { Cuisine } from '../types';
+import { Cuisine } from '../types.ts';
 
 const generateImageUrl = (name: string) => `https://source.unsplash.com/600x400/?${encodeURIComponent(name)},food`;
 

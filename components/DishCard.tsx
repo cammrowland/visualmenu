@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Dish } from '../types';
+import { Dish } from '../types.ts';
 
 interface DishCardProps {
   dish: Dish;

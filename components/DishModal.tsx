@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dish } from '../types';
+import { Dish } from '../types.ts';
 
 interface DishModalProps {
   dish: Dish;

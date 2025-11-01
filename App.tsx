@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
-import foodData from './data/foodData';
-import { Cuisine, Dish } from './types';
-import CuisineSelection from './components/CuisineSelection';
-import CuisineGallery from './components/CuisineGallery';
-import DishModal from './components/DishModal';
+import foodData from './data/foodData.ts';
+import { Cuisine, Dish } from './types.ts';
+import CuisineSelection from './components/CuisineSelection.tsx';
+import CuisineGallery from './components/CuisineGallery.tsx';
+import DishModal from './components/DishModal.tsx';
 
 function App() {
   const [selectedCuisine, setSelectedCuisine] = useState<Cuisine | null>(null);
