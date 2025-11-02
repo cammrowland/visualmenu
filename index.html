@@ -73,7 +73,7 @@ const cuisines = [
   {
     name: 'Chinese',
     emoji: '🥡',
-    image: generateImageUrl("General Tso's Chicken"),
+    image: 'https://i.postimg.cc/SQP5gydG/chinese.jpg',
     description: 'A diverse culinary tradition known for its bold flavors, diverse cooking techniques like stir-frying and steaming, and regional specialties ranging from spicy Sichuan to delicate Cantonese dishes.',
     categories: [
       'Appetizers & Soup',
@@ -123,7 +123,7 @@ const cuisines = [
   {
     name: 'Indian',
     emoji: '🌶️',
-    image: generateImageUrl('Chicken Tikka Masala'),
+    image: 'https://i.postimg.cc/L6ZW7r04/indian.jpg',
     description: 'Characterized by its sophisticated use of spices and herbs, Indian cuisine offers a vast array of regional dishes with complex flavor profiles, from creamy curries and tandoori-grilled meats to diverse vegetarian specialties.',
     categories: [
       'Appetizers & Breads',
@@ -165,7 +165,7 @@ const cuisines = [
   {
     name: 'Thai',
     emoji: '🇹🇭',
-    image: generateImageUrl('Pad Thai'),
+    image: 'https://i.postimg.cc/7Z3WPSk3/thai.jpg',
     description: 'Thai food is famous for its artful balance of the five fundamental taste senses: sweet, sour, salty, bitter, and spicy. It features aromatic herbs like lemongrass, galangal, and Thai basil.',
     categories: ['Appetizers & Soup', 'Main Courses'],
     dishes: [
@@ -193,7 +193,7 @@ const cuisines = [
   {
     name: 'Mexican',
     emoji: '🇲🇽',
-    image: generateImageUrl('Tacos'),
+    image: 'https://i.postimg.cc/52BR98VS/mexican.jpg',
     description: 'A globally beloved cuisine known for its vibrant flavors, fresh ingredients like corn, beans, and chili peppers, and iconic dishes from tacos and enchiladas to complex moles.',
     categories: ['Appetizers / Sides', 'Main Courses'],
     dishes: [
@@ -220,7 +220,7 @@ const cuisines = [
   {
     name: 'Italian',
     emoji: '🇮🇹',
-    image: generateImageUrl('Spaghetti and Meatballs'),
+    image: 'https://i.postimg.cc/BQ1zydwJ/italian.jpg',
     description: 'Rooted in simplicity and high-quality ingredients, Italian-American food is beloved for its comforting pasta dishes, rich tomato sauces, and classic entrees like Chicken Parmesan.',
     categories: ['Appetizers & Sides', 'Main Courses (Pasta)', 'Main Courses (Entrees)'],
     dishes: [
@@ -252,7 +252,7 @@ const cuisines = [
   {
     name: 'Japanese',
     emoji: '🇯🇵',
-    image: generateImageUrl('Sushi Rolls'),
+    image: 'https://i.postimg.cc/CLf2tW6S/japanese.jpg',
     description: 'Japanese cuisine emphasizes seasonality, quality of ingredients, and meticulous preparation. It ranges from delicate raw fish and rich noodle soups to crispy tempura and savory grilled dishes.',
     categories: ['Appetizers & Sides', 'Main Courses (Sushi)', 'Main Courses (Cooked)'],
     dishes: [
@@ -281,7 +281,7 @@ const cuisines = [
   {
     name: 'Greek & Mediterranean',
     emoji: '🇬🇷',
-    image: generateImageUrl('Gyro'),
+    image: 'https://i.postimg.cc/5NFrGZk2/Greek-Mediterranean-food.jpg',
     description: 'Focused on fresh, simple ingredients like olive oil, lemons, herbs, and vegetables. This cuisine features grilled meats, savory pies, and a wide array of flavorful dips and salads.',
     categories: ['Appetizers (Meze) & Sides', 'Main Courses'],
     dishes: [
@@ -307,7 +307,7 @@ const cuisines = [
   {
     name: 'Vietnamese',
     emoji: '🇻🇳',
-    image: generateImageUrl('Pho'),
+    image: 'https://i.postimg.cc/T3V42n69/Vietnamese.jpg',
     description: 'Vietnamese cuisine is known for its fresh ingredients, minimal use of oil, and reliance on fresh herbs and vegetables. It strikes a complex balance between sweet, sour, salty, and spicy flavors.',
     categories: ['Appetizers', 'Main Courses'],
     dishes: [
@@ -325,7 +325,7 @@ const cuisines = [
   {
     name: 'Korean',
     emoji: '🇰🇷',
-    image: generateImageUrl('Bibimbap'),
+    image: 'https://i.postimg.cc/rw1Py5kC/korean.jpg',
     description: 'Known for its bold and pungent flavors, Korean food heavily features ingredients like gochujang (chili paste), kimchi, and sesame oil. Dishes range from world-famous barbecue to hearty stews.',
     categories: ['Appetizers / Sides', 'Main Courses'],
     dishes: [
@@ -376,18 +376,19 @@ const GridSizeControl = ({ size, onChange }) => {
 const CuisineCard = ({ cuisine, onClick }) => {
   return (
     <div 
-      className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer group"
+      className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer group flex flex-col"
       onClick={onClick}
     >
-      <div className="relative aspect-square">
+      <div className="aspect-square w-full">
         <img 
           src={cuisine.image} 
           alt={cuisine.name} 
           className="w-full h-full object-cover" 
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-        <h2 className="absolute bottom-2 left-3 right-3 text-lg md:text-xl font-bold text-white text-center">
+      </div>
+      <div className="p-3 text-center">
+        <h2 className="font-semibold text-white text-base md:text-lg">
           {cuisine.emoji} {cuisine.name}
         </h2>
       </div>
